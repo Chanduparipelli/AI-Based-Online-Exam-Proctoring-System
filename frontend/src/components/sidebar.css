@@ -1,0 +1,33 @@
+/* src/components/sidebar.css */
+.sidebar-inner {
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.brand {
+  font-weight:700;
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+.nav {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.9);
+  padding:10px 12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.nav-link:hover { background: rgba(255,255,255,0.06); }
+
+.nav-link.active {
+  background: rgba(255,255,255,0.12);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}

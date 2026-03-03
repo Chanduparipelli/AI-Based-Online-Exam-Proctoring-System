@@ -1,0 +1,602 @@
+.teacher-layout {
+  display: flex;
+  min-height: 100vh;
+  background: radial-gradient(circle at 0% 0%, #1d4ed8 0%, #020617 45%) fixed,
+    radial-gradient(circle at 100% 100%, #ec4899 0%, #020617 55%) fixed,
+    #020617;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+/* sidebar = first child of teacher-layout */
+.teacher-layout > div:first-child {
+  width: 260px;
+  background: radial-gradient(circle at 0% 0%, #111827 0%, #020617 60%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 10;
+}
+
+/* MAIN RIGHT AREA */
+
+.teacher-main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  margin: 16px;
+  border-radius: 24px;
+  background:
+    radial-gradient(900px 400px at 10% 0%, rgba(59, 130, 246, 0.22), transparent 60%),
+    radial-gradient(900px 500px at 90% 100%, rgba(236, 72, 153, 0.22), transparent 60%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(148, 163, 184, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+/* TOP BAR */
+
+.teacher-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #f9fafb;
+}
+
+.t-top-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.t-top-sub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.t-top-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* BUTTONS */
+
+.t-btn {
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(15, 23, 42, 0.8);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.t-btn.primary {
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(37, 99, 235, 0.45);
+  border: none;
+}
+
+.t-btn.ghost {
+  background: transparent;
+}
+
+.t-btn.small {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.t-btn.block {
+  width: 100%;
+  justify-content: center;
+  display: inline-flex;
+  text-align: center;
+}
+
+/* STATS ROW */
+
+.t-stats-row {
+  display: flex;
+  gap: 14px;
+  margin: 18px 0;
+  align-items: stretch;
+}
+
+.t-stat-card {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: #fff;
+  min-width: 160px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.7);
+  transform: translateY(0);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.t-stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.9);
+}
+
+.t-stat-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: rgba(15, 23, 42, 0.25);
+  border-radius: 12px;
+}
+
+.t-stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.t-stat-value {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.t-stat-label {
+  font-size: 12px;
+  opacity: 0.98;
+}
+
+/* EXAM TYPE CARDS */
+
+.t-exam-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.t-exam-type-card {
+  border-radius: 16px;
+  padding: 12px;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.9);
+  transform: translateY(0);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.t-exam-type-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 1);
+}
+
+.t-exam-type-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.t-exam-type-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.t-exam-type-title {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.t-exam-type-sub {
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+/* MAIN GRID */
+
+.t-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 0.9fr);
+  gap: 18px;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+
+.t-main-left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.t-main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* PANELS */
+
+.t-panel {
+  background: rgba(15, 23, 42, 0.98);
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(148, 163, 184, 0.15);
+  color: #e5e7eb;
+}
+
+.t-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.t-panel-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.t-panel-sub {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.t-filter-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.t-chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.8);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.t-chip.active {
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 12px 34px rgba(37, 99, 235, 0.6);
+}
+
+/* EXAM CARDS */
+
+.t-exams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.t-exam-card {
+  background: radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.12), transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.12), transparent 45%),
+    rgba(15, 23, 42, 0.98);
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  cursor: pointer;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.9);
+  transform: translateY(0);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  color: #e5e7eb;
+}
+
+.t-exam-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 1);
+  border-color: rgba(129, 140, 248, 0.9);
+}
+
+.t-exam-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.t-exam-title {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.t-badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.t-status-upcoming {
+  background: rgba(59, 130, 246, 0.16);
+  color: #bfdbfe;
+}
+
+.t-status-running {
+  background: rgba(22, 163, 74, 0.2);
+  color: #bbf7d0;
+}
+
+.t-status-finished {
+  background: rgba(148, 163, 184, 0.2);
+  color: #e5e7eb;
+}
+
+.t-status-unknown {
+  background: rgba(55, 65, 81, 0.3);
+  color: #e5e7eb;
+}
+
+.t-exam-sub {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.t-exam-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.t-exam-time {
+  color: #d1d5db;
+  font-size: 12px;
+}
+
+.t-exam-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* RIGHT MINI CARDS */
+
+.t-mini-card {
+  background: rgba(15, 23, 42, 0.98);
+  padding: 14px;
+  border-radius: 18px;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(148, 163, 184, 0.18);
+  color: #e5e7eb;
+}
+
+.t-mini-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.t-live-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.t-live-preview {
+  width: 130px;
+  height: 90px;
+  border-radius: 10px;
+  background: radial-gradient(circle at 0% 0%, #4f46e5 0%, #0f172a 55%);
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #e5e7eb;
+}
+
+.t-live-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.t-live-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.t-quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* PLACEHOLDER / EMPTY */
+
+.t-placeholder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.t-placeholder-row {
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #0f172a, #111827, #0f172a);
+  opacity: 0.7;
+  animation: t-pulse 1.2s infinite;
+}
+
+.t-empty-note {
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+/* MODAL */
+
+.t-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  padding: 20px;
+}
+
+.t-modal {
+  width: 720px;
+  max-width: 95%;
+  background: radial-gradient(circle at 0% 0%, #4f46e5 0%, #020617 65%);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 1);
+  color: #f9fafb;
+}
+
+.t-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.t-modal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.t-modal-sub {
+  color: #d1d5db;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.t-modal-body {
+  margin-top: 8px;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.t-modal-meta {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+  color: #cbd5f5;
+  font-size: 13px;
+}
+
+.t-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* TOAST */
+
+.t-toast {
+  position: fixed;
+  right: 22px;
+  top: 18px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  z-index: 50;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.t-toast.error {
+  background: #ef4444;
+}
+
+.t-toast.success {
+  background: #10b981;
+}
+
+/* ANIMATIONS & RESPONSIVE */
+
+@keyframes t-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 980px) {
+  .t-main {
+    grid-template-columns: 1fr;
+  }
+
+  .t-stats-row {
+    flex-direction: column;
+  }
+
+  .teacher-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .t-top-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .teacher-main {
+    margin: 10px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .teacher-layout > div:first-child {
+    width: 220px;
+  }
+}

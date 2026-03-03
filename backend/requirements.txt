@@ -1,0 +1,11 @@
+fastapi==0.100.0
+uvicorn[standard]==0.22.0
+python-jose==3.3.0
+passlib[bcrypt]==1.7.4
+motor==3.7.1
+pydantic==1.10.12
+python-multipart==0.0.6
+opencv-python-headless==4.10.0.84
+numpy==1.26.0
+python-dotenv==1.0.0
+websockets==11.0.3

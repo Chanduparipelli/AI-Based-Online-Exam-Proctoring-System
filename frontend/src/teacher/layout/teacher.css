@@ -1,0 +1,41 @@
+.teacher-sidebar {
+  width: 260px;
+  background: radial-gradient(circle at 0% 0%, #111827 0%, #020617 60%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  padding: 18px 14px;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #020617) !important;
+}
+
+.teacher-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #020617);
+  color: white;
+}
+
+.teacher-sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #020617, #0f172a);
+  padding: 20px;
+}
+
+.teacher-main {
+  flex: 1;
+  padding: 22px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.teacher-topbar {
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #1e3a8a, #0f172a);
+  margin-bottom: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}

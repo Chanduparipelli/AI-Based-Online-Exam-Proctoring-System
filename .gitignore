@@ -1,0 +1,7 @@
+yolo_service/.venv_yolo/
+backend/.venv/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc

@@ -1,0 +1,82 @@
+.upcoming-page {
+  min-height: 100vh;
+  padding: 40px;
+  color: white;
+}
+
+.upcoming-header h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.upcoming-header p {
+  color: #bfc7ff;
+  margin-bottom: 30px;
+}
+
+.loading-text,
+.no-exams {
+  color: #ccc;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.upcoming-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.upcoming-card {
+  background: linear-gradient(135deg, #111827, #1e293b);
+  border-radius: 14px;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid #2a2f55;
+}
+
+.upcoming-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+}
+
+.exam-left h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.exam-left p {
+  margin: 4px 0;
+  color: #cbd5f5;
+}
+
+.exam-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.exam-marks {
+  font-size: 20px;
+  font-weight: bold;
+  color: #22d3ee;
+}
+
+.start-btn {
+  padding: 10px 20px;
+  border-radius: 22px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.7);
+}

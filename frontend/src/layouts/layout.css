@@ -1,0 +1,61 @@
+/* src/layouts/layout.css */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f7fb;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Sidebar area */
+.app-sidebar {
+  width: 260px;
+  background: linear-gradient(180deg,#4b0082,#3b0d6f);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.06);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+/* Main content to the right of sidebar */
+.app-content {
+  margin-left: 260px;
+  flex: 1;
+  padding: 20px 28px;
+}
+
+/* Topbar inside content area */
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom: 18px;
+}
+
+.topbar .btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding:8px 12px;
+  border-radius:8px;
+}
+
+/* small container for the page area */
+.content-area {
+  background: transparent;
+}
+
+/* Responsive: collapse sidebar on small screens */
+@media (max-width: 880px) {
+  .app-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .app-content {
+    margin-left: 0;
+    padding: 12px;
+  }
+}

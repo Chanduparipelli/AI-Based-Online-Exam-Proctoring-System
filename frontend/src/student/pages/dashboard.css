@@ -1,0 +1,224 @@
+/* ===== GLOBAL THEME ===== */
+:root {
+  --navy: #0f172a;
+  --cyan: #06b6d4;
+  --violet: #7c3aed;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.15);
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui;
+}
+
+/* ===== DASHBOARD WRAPPER ===== */
+.gradient-page {
+  padding: 24px;
+}
+
+.student-dashboard {
+  padding-bottom: 40px;
+}
+
+/* ===== HEADER ===== */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dash-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dash-sub {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.dash-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== INPUTS ===== */
+.search {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.toggle-inline {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
+  border: none;
+}
+
+.btn.ghost {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.btn.ghost:hover {
+  background-color: #06b6d4 !important;
+  color: #ffffff !important;
+  border: 3px solid #06b6d4 !important;
+}
+
+
+
+
+
+/* ===== STATS ===== */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.grad-stat {
+  padding: 18px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.gs-value {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* ===== MAIN GRID ===== */
+.dash-main {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 20px;
+}
+
+.card-panel {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 20px;
+}
+
+/* ===== EXAM CARDS ===== */
+.exam-card {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.exam-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.3);
+}
+
+/* ===== MODAL ===== */
+.modal-wrap {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 22px;
+  width: 90%;
+  max-width: 540px;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--violet);
+  color: white;
+}
+
+/* ===== UPCOMING + RESULTS ===== */
+.exam-card h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 13px;
+}
+
+.card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 18px;
+}
+.course-card button {
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+button {
+  display: inline-block !important;
+}
+.course-content {
+  white-space: pre-line;
+  line-height: 1.6;
+}
